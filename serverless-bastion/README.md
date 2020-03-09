@@ -9,6 +9,12 @@ Serverless Bastion
 $ SSH_PASSWORD=
 ```
 
+## Decide enable sudo or not
+
+```
+$ ENABLESUDO=
+```
+
 ## Create a base stack & retrieve the outputs
 
 ```

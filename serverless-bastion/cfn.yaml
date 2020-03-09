@@ -8,10 +8,14 @@ Metadata:
           default: SSH Configuration
         Parameters:
           - Password
+          - ENABLESUDO
 
 Parameters:
   Password:
     Description: SSH password
+    Type: String
+  ENABLESUDO:
+    Description: ENABLESUDO
     Type: String
 
 Mappings:
@@ -208,6 +212,8 @@ Resources:
           Environment:
             - Name: SSH_PASSWORD
               Value: !Ref Password
+            - Name: ENABLE_SUDO
+              Value: !Ref ENABLESUDO
           LogConfiguration:
             LogDriver: awslogs
             Options:
